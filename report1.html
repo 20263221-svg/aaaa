@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보고서 - 현대 전쟁이 전력 및 에너지 시스템에 미치는 영향</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: #0a0e17;
+            color: #e8ecf4;
+            min-height: 100vh;
+        }
+        .report-header {
+            background: linear-gradient(135deg, #1a1030 0%, #12182a 100%);
+            border-bottom: 2px solid rgba(245, 158, 11, 0.3);
+            padding: 40px 24px 32px;
+            text-align: center;
+        }
+        .report-badge {
+            display: inline-block;
+            background: rgba(245, 158, 11, 0.15);
+            color: #f59e0b;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            padding: 6px 16px;
+            border-radius: 20px;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            margin-bottom: 16px;
+        }
+        .report-title {
+            font-size: clamp(1.4rem, 3vw, 2rem);
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff 0%, #f59e0b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
+        .report-author {
+            font-size: 1.1rem;
+            color: #8892a8;
+            font-weight: 500;
+        }
+        .report-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+        .report-body h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #f59e0b;
+            margin-top: 36px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+        }
+        .report-body h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #fbbf24;
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+        .report-body p {
+            font-size: 1rem;
+            line-height: 1.9;
+            color: #c0c8d8;
+            margin-bottom: 16px;
+            text-indent: 1em;
+        }
+        .back-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            width: 50px;
+            height: 50px;
+            background: #f59e0b;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+            transition: transform 0.2s;
+        }
+        .back-btn:hover { transform: scale(1.1); }
+    </style>
+</head>
+<body>
+    <div class="report-header">
+        <div class="report-badge">STAGE 1 REPORT</div>
+        <h1 class="report-title">현대 전쟁이 전력 및 에너지 시스템에 미치는 영향<br>(미국-이란 전쟁을 중심으로)</h1>
+        <div class="report-author">작성자: 3221 최지안</div>
+    </div>
+    <div class="report-body">
+        <h2>I. 서론</h2>
+        <p>현대 국가에서 전력 및 에너지 시스템은 경제, 산업, 통신, 의료 등 사회 전반을 지탱하는 핵심 인프라이다. 과거의 전쟁이 주로 영토 확장이나 군사력 파괴에 집중되었다면, 21세기의 '하이브리드 전쟁'은 국가 기반 시설, 특히 에너지 및 전력망을 최우선적인 공격 대상으로 삼는다.</p>
+        <p>2026년 2월 발발한 미국-이란 전쟁은 현대 전쟁이 세계적인 에너지 공급망과 가격 체계에 얼마나 치명적인지를 극명하게 보여주고 있다. 글로벌 에너지 공급망의 요충지인 호르무즈 해협이 위협받고 양국의 핵심 인프라에 대한 물리적‧사이버 공격이 전개되었으며 정상화에 수개월 이상이 걸릴 전망이다.</p>
+        <p>이번 전쟁이 전 세계 전력 생산과 에너지 물류를 마비시킬 수 있는 '에너지 전쟁'의 성격을 띠고 있다는 점에서 현대 전쟁이 전력 및 에너지 시스템에 미치는 영향을 물리적 파괴, 사이버 마비, 사회‧경제적 파급 효과의 세 가지 관점에서 탐구해 보고자 한다.</p>
+
+        <h2>II. 본론</h2>
+        <h3>1. 글로벌 에너지 공급망의 마비와 물리적 타격</h3>
+        <p>전쟁은 에너지의 생산, 정제, 운송에 이르는 물리적 사회 기반 시설을 직접적으로 파괴한다. 2026년 미국-이란 전쟁에서 가장 두드러진 지점은 '호르무즈 해협의 봉쇄 및 위협'이다. 전 세계 해상 원유 물동량의 약 20~30%가 통과하는 이 해협이 기뢰 부설 및 대함 미사일 위협으로 인해 통제되면서 아시아와 유럽으로 향하는 막대한 양의 원유 및 천연가스 공급이 즉각적으로 차단되었다.</p>
+        <p>또한 이란의 정유 시설 및 핵 시설에 대한 공격과 이에 맞선 이란 및 친이란 무장단체의 인근 중동 국가 가스 시설 및 송유관 타격은 에너지 생산 능력을 크게 감소시켰다. 이런 물리적 타격 때문에 글로벌 유가가 폭등했으며, 화석 연료에 대한 의존도가 높은 국가들의 전력 생산 단가를 급상승시켜 전 세계적인 에너지 위기를 촉발했다.</p>
+
+        <h3>2. 사이버전을 통한 국가 전력망 마비</h3>
+        <p>현대 전력망은 감시 제어 및 데이터 수집 시스템(SCADA)을 통해 운영되는데, 이 시스템은 해킹 및 사이버 공격에 취약하다는 치명적인 단점을 갖고 있다. 이번 미-이란 분쟁에서는 미사일이 날아가기 전부터 보이지 않는 사이버전이 전력망을 향해 전개되었다.</p>
+        <p>지난 4월 이란과 연계된 해커들이 미국 핵심 인프라에 대한 사이버 공격을 시도한 사례도 있다. 공격 대상은 정부시설, 수자원 및 폐수 처리 시스템, 에너지 부문 등으로 확인됐다. 이 공격으로 인해 에너지 업계 전반에 경계령이 발령되었고, 전력망에 대한 실시간 모니터링 체계를 유지하고 있는 것으로 나타났다. 이를 통해 물리적인 무기 없이 디지털 인프라의 공격만으로 한 국가의 경제‧안보를 붕괴시킬 수 있다는 것이 입증되었다.</p>
+
+        <h3>3. 전력 및 에너지 부족이 초래하는 파급 효과</h3>
+        <p>에너지 시스템의 붕괴는 단순한 정전으로 끝나지 않고 연쇄적인 사회 시스템 마비로 이어진다. 전쟁으로 인한 에너지 위기로 국가 차원의 경제 비상조치가 전세계로 확산되고 있다. 현 상황이 장기화될 경우 심각한 경제 침체가 초래될 수 있다는 우려가 커지고 있다.</p>
+        <p>국제에너지기구(IEA)는 에너지 위기에 대응해 비상조치를 취한 국가가 최근 76개국으로 늘어난 것으로 보고 있다. 호주는 연료 및 비료 비축을 위해 정부 지출을 약 11조원 증액하겠다고 발표했고, 인도는 보유 외환 확충을 위해 금 구매나 해외여행을 자제해 달라고 촉구했다. 파키스탄, 필리핀 등은 공무원을 대상으로 주 4일 근무제를 시행하고 있다. 특히 개발도상국에서는 에너지 공급 부족 문제가 물자 부족 현상으로 나타나고 있다. 에너지 수입 의존도가 높은 국가들은 막대한 경제적 타격을 입을 것으로 예상된다.</p>
+        <p>전문가들은 호르무즈 해협 통제로 인해 유가가 다시 급등해 글로벌 경제 위기가 발생할 가능성이 있다고 밝혔다.</p>
+
+        <h2>III. 결론</h2>
+        <p>이번 미국-이란 전쟁은 에너지가 최고의 무기라는 사실을 보여줬다. 전쟁으로 인한 원유 수송로 차단과 인프라 파괴는 글로벌 에너지 위기를 불러왔고, 첨단 사이버 공격은 총알 한 발 없이도 적국의 전력망을 마비시켜 국가 기능을 정지시킬 수 있음을 보여주었다.</p>
+        <p>이러한 사태가 우리에게 시사하는 바는 명확하다. 첫째, 특정 국가나 특정 화석 연료에 대한 과도한 에너지 의존은 심각한 안보 위협이 되므로, 다양한 공급책을 마련하는 것이 필수적이다. 둘째, 중앙 집중형 전력망은 전시 타격의 1순위가 되므로, 태양광, 풍력 등 신재생 에너지를 활용한 소규모 독립형 전력망 구축을 통해 전력망을 분산시켜야 한다. 셋째, 물리적 방어 못지않게 국가 기반 시설을 노리는 사이버 공격에 대비한 강력한 사이버 보안 체계 확립이 시급하다.</p>
+        <p>다가오는 시대의 국가 안보는 군사력을 넘어 독립적이고 복원력(Resilience)이 강한 에너지 및 전력 시스템을 얼마나 잘 구축하고 보호하느냐에 달려 있다고 할 수 있다.</p>
+    </div>
+    <button class="back-btn" onclick="history.back()" title="돌아가기">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+    </button>
+</body>
+</html>

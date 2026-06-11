@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보고서 - AI와 위성 데이터 기반 전쟁 지역 환경 피해 분석</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: #0a0e17;
+            color: #e8ecf4;
+            min-height: 100vh;
+        }
+        .report-header {
+            background: linear-gradient(135deg, #1a1030 0%, #12182a 100%);
+            border-bottom: 2px solid rgba(245, 158, 11, 0.3);
+            padding: 40px 24px 32px;
+            text-align: center;
+        }
+        .report-badge {
+            display: inline-block;
+            background: rgba(245, 158, 11, 0.15);
+            color: #f59e0b;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            padding: 6px 16px;
+            border-radius: 20px;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            margin-bottom: 16px;
+        }
+        .report-title {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff 0%, #f59e0b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.4;
+            margin-bottom: 12px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .report-author {
+            font-size: 1.1rem;
+            color: #8892a8;
+            font-weight: 500;
+        }
+        .report-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+        .report-body h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #f59e0b;
+            margin-top: 36px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+        }
+        .report-body p {
+            font-size: 1rem;
+            line-height: 1.9;
+            color: #c0c8d8;
+            margin-bottom: 16px;
+            text-indent: 1em;
+        }
+        .back-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            width: 50px;
+            height: 50px;
+            background: #f59e0b;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+            transition: transform 0.2s;
+        }
+        .back-btn:hover { transform: scale(1.1); }
+    </style>
+</head>
+<body>
+    <div class="report-header">
+        <div class="report-badge">STAGE 5 REPORT</div>
+        <h1 class="report-title">인공지능과 위성 데이터 기반의 전쟁 지역 환경 피해 분석 및 지속 가능한 복구 전략 연구</h1>
+        <div class="report-author">작성자: 3204 김서진</div>
+    </div>
+    <div class="report-body">
+        <h2>1. 서론: 전쟁의 비가시적 피해와 탐구의 필요성</h2>
+        <p>인류 역사가 증명하듯 전쟁은 즉각적인 인명 피해와 인프라 파괴를 넘어, 해당 지역의 생태계에 회복 불가능한 타격을 입히는 '환경적 재앙'을 동반합니다. 포탄에 의한 토양 오염, 유류 저장소 파괴로 인한 수질 오염, 대규모 화재로 인한 산림 소실 등은 전쟁이 끝난 후에도 지역 주민들의 삶의 질을 저하시키고 생존을 위협하는 장기적인 요소가 됩니다. 그러나 실제 교전이 벌어지는 지역은 물리적인 위험과 정치적 제약으로 인해 연구자가 직접 현장에 방문하여 환경 피해 정도를 측정하는 것이 사실상 불가능합니다. 이러한 한계를 극복하기 위해 본 탐구는 우주 공간에서 지구를 관측하는 위성 원격 탐사 기술과 방대한 데이터를 정밀하게 처리할 수 있는 인공지능 기술의 결합에 주목하였습니다. 이는 위험 지역에 발을 들이지 않고도 전 지구적 관점에서 환경 파괴의 실태를 실시간으로 기록하고 분석할 수 있는 가장 과학적이고 인도주의적인 방법입니다.</p>
+
+        <h2>2. 핵심 기술의 원리와 분석 방법론</h2>
+        <p>본 탐구에서 활용하는 핵심 도구는 다중 스펙트럼 위성 이미지와 딥러닝 알고리즘입니다. 우선 데이터 수집 단계에서는 유럽우주국(ESA)의 Sentinel-2와 같은 광학 위성을 통해 가시광선뿐만 아니라 인간의 눈으로 볼 수 없는 근적외선 영역의 데이터를 확보합니다. 식물은 건강할수록 근적외선을 강하게 반사하고 가시광선의 적색광을 흡수하는 특성이 있는데, 이를 수치화한 것이 식생 지수(NDVI)입니다. 전쟁 전후의 NDVI 수치를 시계열적으로 분석하면 포격이나 화학 물질 살포로 인해 식생이 급격히 파괴된 구역을 정확하게 픽셀 단위로 추출할 수 있습니다.</p>
+        <p>하지만 광학 위성은 구름이 끼거나 야간일 경우 관측이 어렵다는 단점이 있습니다. 이를 보완하기 위해 레이저를 지표면에 쏘아 되돌아오는 신호를 측정하는 SAR(합성 개구 레이더) 위성인 Sentinel-1 데이터를 병행 사용합니다. SAR 데이터는 지표면의 거칠기와 형태 변화에 민감하므로, 폭격으로 발생한 거대한 구덩이(Crater)나 건물의 붕괴 형태를 입체적으로 파악하는 데 탁월합니다. 인공지능은 여기서 수만 장의 위성 사진을 학습하여 일반적인 지형과 포탄 구덩이를 구분하는 '시맨틱 세그멘테이션' 기법을 수행합니다. 특히 컨볼루션 신경망(CNN) 기반의 모델은 육안으로 식별하기 어려운 미세한 지형 왜곡까지 잡아내어, 교전 지역의 포탄 밀도와 화력 투하량을 통계적으로 산출해 낼 수 있습니다.</p>
+
+        <h2>3. 환경 피해의 유형별 상세 분석</h2>
+        <p>전쟁으로 인한 환경 피해는 크게 세 가지 측면에서 분석됩니다. 첫째는 산림 및 식생의 소실입니다. 인공지능은 위성 영상 내에서 녹색으로 표시되던 숲이 화재나 군사 활동으로 인해 회색이나 검은색의 나지로 변하는 과정을 추적합니다. 이는 탄소 흡수원 상실과 생물 다양성 파괴로 이어집니다. 둘째는 토양의 물리적·화학적 변형입니다. 수천 개의 포탄 구덩이가 발생한 토양은 물리적 구조가 파괴되어 농경지로서의 기능을 상실하며, 포탄에 포함된 중금속 성분이 토양에 잔류하게 됩니다. AI 모델은 이러한 구덩이의 분포 지도를 작성하여 향후 지뢰 제거 및 토양 정화가 필요한 우선 구역을 설정합니다. 셋째는 수질 오염의 확산입니다. 전쟁 중 파괴된 유류 저장소나 화학 공장에서 흘러나온 오염 물질은 인근 하천으로 유입됩니다. 위성 이미지의 색상 변화를 분석하는 수질 알고리즘을 통해 오염 물질의 확산 경로와 범위를 예측함으로써, 하류 지역 주민들의 식수원 오염 가능성을 사전에 경고할 수 있습니다.</p>
+
+        <h2>4. 결론 및 향후 전망: 데이터 기반의 평화 구축</h2>
+        <p>본 탐구를 통해 도출된 데이터 기반의 환경 피해 분석은 단순히 파괴의 기록을 남기는 것을 넘어, 전쟁 이후의 지속 가능한 복구 전략을 수립하는 데 결정적인 역할을 합니다. 인공지능으로 도출된 정밀한 환경 피해 지도는 국제 사회가 전쟁 범죄를 조사하거나 환경 배상 책임을 물을 때 객관적인 증거 자료로 활용될 수 있습니다. 또한 복구 단계에서는 자원이 한정된 상황에서 어떤 지역의 생태계를 먼저 회복시켜야 할지 결정하는 과학적 가이드라인이 됩니다.</p>
+        <p>결론적으로 AI와 위성 데이터의 결합은 현대 전쟁이 자연에 남기는 깊은 흉터를 가시화하고, 이를 치유하기 위한 인류의 지성적 대응입니다. 향후 실시간 위성 관측 주기가 단축되고 AI 모델의 정확도가 더욱 높아진다면, 전쟁 중 발생하는 환경 재난을 즉각적으로 탐지하고 대응할 수 있는 '지구 환경 모니터링 시스템' 구축이 가능해질 것입니다. 이는 기술이 인류의 비극을 방조하는 것이 아니라, 생태계 보호와 평화 재건을 위한 강력한 도구로 쓰일 수 있음을 시사합니다.</p>
+    </div>
+    <button class="back-btn" onclick="history.back()" title="돌아가기">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+    </button>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="전쟁으로 인한 환경 문제를 주제로 한 틀린그림 찾기 게임">
+    <title>틀린그림 찾기 - 전쟁과 환경</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Title Screen -->
+    <div id="title-screen" class="screen active">
+        <div class="title-bg">
+            <div class="smoke smoke-1"></div>
+            <div class="smoke smoke-2"></div>
+            <div class="smoke smoke-3"></div>
+        </div>
+        <div class="title-content">
+            <div class="title-badge">EDUCATIONAL GAME</div>
+            <h1 class="title-main">틀린그림 찾기</h1>
+            <p class="title-sub">전쟁으로 인한 환경 문제</p>
+            <p class="title-desc">전쟁이 우리 일상에 미치는 영향을 찾아보세요.<br>각 스테이지에서 두 그림의 차이점 5개를 모두 찾으면 다음으로 넘어갑니다.</p>
+            <button id="start-btn" class="btn-primary" onclick="startGame()">
+                <span>게임 시작</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen">
+        <header class="game-header">
+            <div class="header-left">
+                <span class="stage-badge" id="stage-badge">STAGE 1</span>
+                <!-- Move counter here -->
+                <div class="found-counter" style="margin-left:12px; font-size:0.9rem; padding: 4px 12px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                    <span id="found-count">0</span> / <span id="total-count">5</span>
+                </div>
+            </div>
+            <div class="header-center">
+                <span class="stage-title" id="stage-title">거실 풍경</span>
+            </div>
+            <div class="header-right">
+                <button id="header-next-btn" class="btn-next-stage" onclick="nextStage()" style="margin-right: 12px;">
+                    다음 스테이지 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+                <button class="btn-icon" onclick="showTitle()" title="메인으로">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+                </button>
+            </div>
+        </header>
+
+        <div class="game-area">
+            <div class="images-container">
+                <!-- Left Image (Before) -->
+                <div class="image-panel" id="panel-left">
+                    <div class="panel-label">그림 A</div>
+                    <div class="scene-container" id="scene-left"></div>
+                </div>
+
+                <div class="divider">
+                    <div class="divider-line"></div>
+                    <div class="divider-icon">VS</div>
+                    <div class="divider-line"></div>
+                </div>
+
+                <!-- Right Image (After) -->
+                <div class="image-panel" id="panel-right">
+                    <div class="panel-label">그림 B</div>
+                    <div class="scene-container" id="scene-right"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Found indicators -->
+        <div class="found-indicators" id="found-indicators"></div>
+    </div>
+
+    <!-- Stage Clear Overlay -->
+    <div id="stage-clear" class="overlay">
+        <div class="clear-modal">
+            <div class="clear-icon">🎉</div>
+            <h2>스테이지 클리어!</h2>
+            <p id="clear-message">모든 차이점을 찾았습니다!</p>
+            <div id="clear-summary" class="clear-summary"></div>
+            <button class="btn-primary" id="next-stage-btn" onclick="nextStage()">
+                <span>다음 스테이지</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Final Message Overlay -->
+    <div id="final-message" class="overlay">
+        <div class="clear-modal final-modal">
+            <div class="clear-icon">🌍</div>
+            <h2>모든 스테이지 완료</h2>
+            <p class="final-text">환경 파괴는 전쟁의 숨겨진 희생자입니다.<br><br>폭발과 화재, 유독 물질 유출과 생태계 파괴 등... 전쟁으로 인해 심각하고 장기적인 환경오염이 초래됩니다. 이를 복구하는 데는 상상할 수 없는 시간과 노력이 필요합니다.<br><br>평화만이 지구를 지키는 가장 확실한 방법입니다.</p>
+            <button class="btn-primary" onclick="showTitle()">
+                <span>처음으로 돌아가기</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Tooltip -->
+    <div id="tooltip" class="tooltip">
+        <div class="tooltip-title" id="tooltip-title"></div>
+        <div class="tooltip-text" id="tooltip-text"></div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
